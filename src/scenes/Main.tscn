@@ -1,6 +1,18 @@
-[gd_scene load_steps=2 format=3 uid="uid://cfsig4twqdfe3"]
+[gd_scene load_steps=3 format=3 uid="uid://cfsig4twqdfe3"]
 
 [ext_resource type="Script" path="res://src/scenes/Main.cs" id="1_ltsb0"]
+[ext_resource type="PackedScene" uid="uid://iimw1112etc5" path="res://src/character/Character.tscn" id="2_56qyq"]
 
 [node name="Main" type="Node"]
 script = ExtResource("1_ltsb0")
+
+[node name="World" type="Node3D" parent="."]
+
+[node name="Characters" type="Node" parent="World"]
+
+[node name="Character" parent="World/Characters" instance=ExtResource("2_56qyq")]
+
+[node name="Camera3D" type="Camera3D" parent="World"]
+transform = Transform3D(-0.707107, -0.353553, 0.612372, 0, 0.866025, 0.5, -0.707107, 0.353553, -0.612372, 8, 8, -8)
+projection = 1
+size = 10.0
