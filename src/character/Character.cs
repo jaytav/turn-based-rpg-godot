@@ -15,6 +15,6 @@ public partial class Character : Node3D
 
     public void EndTurn()
     {
-        EmitSignal("TurnStarted", this);
+        EmitSignal("TurnEnded", this);
     }
 }

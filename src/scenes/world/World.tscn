@@ -12,6 +12,8 @@ height = 0.5
 
 [node name="Character" parent="Characters" instance=ExtResource("1_xldhp")]
 
+[node name="Enemy" parent="Characters" instance=ExtResource("1_xldhp")]
+
 [node name="Environment" type="Node" parent="."]
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="Environment"]
