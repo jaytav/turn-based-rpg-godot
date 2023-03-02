@@ -1,0 +1,29 @@
+[gd_scene load_steps=3 format=3 uid="uid://dbw3akrqlveku"]
+
+[ext_resource type="PackedScene" uid="uid://iimw1112etc5" path="res://src/character/Character.tscn" id="1_xldhp"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_fy33x"]
+radius = 0.25
+height = 0.5
+
+[node name="World" type="Node3D"]
+
+[node name="Characters" type="Node" parent="."]
+
+[node name="Character" parent="Characters" instance=ExtResource("1_xldhp")]
+
+[node name="Environment" type="Node" parent="."]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="Environment"]
+transform = Transform3D(0.707107, -0.5, 0.5, 0, 0.707107, 0.707107, -0.707107, -0.5, 0.5, 0, 10, 0)
+
+[node name="CameraContainer" type="Node3D" parent="."]
+transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, 0, 0, 0)
+
+[node name="Camera3D" type="Camera3D" parent="CameraContainer"]
+transform = Transform3D(1, 5.54279e-08, 3.20013e-08, -6.40026e-08, 0.866026, 0.5, 0, -0.5, 0.866026, 0, 6, 8)
+projection = 1
+size = 10.0
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="CameraContainer"]
+mesh = SubResource("SphereMesh_fy33x")
