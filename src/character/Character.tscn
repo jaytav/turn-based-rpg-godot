@@ -3,6 +3,7 @@
 [ext_resource type="Script" path="res://src/character/Character.cs" id="1_6r7mg"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ocwfy"]
+albedo_color = Color(0.52549, 0.752941, 1, 1)
 
 [sub_resource type="BoxMesh" id="BoxMesh_j54mj"]
 material = SubResource("StandardMaterial3D_ocwfy")
