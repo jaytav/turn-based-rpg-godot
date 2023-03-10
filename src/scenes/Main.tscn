@@ -1,23 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://cfsig4twqdfe3"]
+[gd_scene load_steps=2 format=3 uid="uid://cfsig4twqdfe3"]
 
 [ext_resource type="Script" path="res://src/scenes/Main.cs" id="1_ltsb0"]
-[ext_resource type="PackedScene" uid="uid://dbw3akrqlveku" path="res://src/scenes/world/World.tscn" id="2_h4tor"]
-[ext_resource type="Script" path="res://src/controllers/CameraController.cs" id="2_w4x53"]
-[ext_resource type="Script" path="res://src/controllers/CharacterController.cs" id="3_wnxr6"]
-[ext_resource type="Script" path="res://src/controllers/TurnController.cs" id="3_yfxhj"]
 
 [node name="Main" type="Node"]
 script = ExtResource("1_ltsb0")
 
 [node name="Controllers" type="Node" parent="."]
-
-[node name="CameraController" type="Node" parent="Controllers"]
-script = ExtResource("2_w4x53")
-
-[node name="CharacterController" type="Node" parent="Controllers"]
-script = ExtResource("3_wnxr6")
-
-[node name="TurnController" type="Node" parent="Controllers"]
-script = ExtResource("3_yfxhj")
-
-[node name="World" parent="." instance=ExtResource("2_h4tor")]
