@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://d2sbjm2whf8n5"]
+
+[ext_resource type="PackedScene" uid="uid://clv05gjxp6kb3" path="res://src/character/Character.tscn" id="1_xldhp"]
+
+[node name="World" type="Node2D"]
+
+[node name="Characters" type="Node" parent="."]
+
+[node name="Character" parent="Characters" instance=ExtResource("1_xldhp")]
+position = Vector2(608, 304)

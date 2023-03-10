@@ -1,6 +1,6 @@
 using Godot;
 
-public partial class Character : Node3D
+public partial class Character : Node2D
 {
     [Signal]
     public delegate void TurnStartedEventHandler(Character character);
