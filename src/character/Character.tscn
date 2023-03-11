@@ -4,10 +4,11 @@
 [ext_resource type="Texture2D" uid="uid://gqrkofa5mhja" path="res://assets/textures/character/character.svg" id="2_rux8i"]
 
 [node name="Character" type="Node2D"]
+y_sort_enabled = true
 texture_filter = 1
+scale = Vector2(2, 2)
 script = ExtResource("1_6r7mg")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(0, -16)
-scale = Vector2(2, 2)
+position = Vector2(0, -8)
 texture = ExtResource("2_rux8i")
